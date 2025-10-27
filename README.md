@@ -1,11 +1,20 @@
 # Projeto - Farmácia API
 
-API RESTful desenvolvida com **Spring Boot**, **Java**, **JPA/Hibernate** e **MySQL**, para gerenciamento de produtos e usuários de uma farmácia.  
-O projeto inclui autenticação JWT e segurança com Spring Security.
+🧩 API RESTful desenvolvida com Spring Boot, Java, JPA/Hibernate e MySQL, voltada para o gerenciamento de produtos e usuários de uma farmácia.
+
+Funcionalidades principais:
+
+📦 Gerenciamento de produtos: CRUD completo de produtos, incluindo categorias e estoque.
+
+👥 Gerenciamento de usuários: cadastro, atualização e autenticação de usuários.
+
+🔒 Segurança: autenticação via JWT e proteção de rotas com Spring Security.
+
+🔄 Fluxo de operações claro: o fluxograma abaixo demonstra o fluxo de cadastro, login e gerenciamento de produtos/usuários.
 
 ---
 
-## 🔹 Tecnologias Utilizadas
+## 🧰 Tecnologias Utilizadas ️
 
 - Java 17+
 - Spring Boot 3+
@@ -20,7 +29,7 @@ O projeto inclui autenticação JWT e segurança com Spring Security.
 
 ---
 
-## 🔹 Funcionalidades
+## ⚙ Funcionalidades
 
 ### Usuários
 - Cadastro de usuários
@@ -48,33 +57,7 @@ O projeto inclui autenticação JWT e segurança com Spring Security.
 
 ## 🔹 Estrutura do Projeto
 
-src/main/java/com/generation/farmacia
-│
-├─ model
-│ ├─ Produto.java
-│ ├─ Categoria.java
-│ ├─ Usuario.java
-│ └─ UsuarioLogin.java
-│
-├─ repository
-│ ├─ ProdutoRepository.java
-│ ├─ CategoriaRepository.java
-│ └─ UsuarioRepository.java
-│
-├─ service
-│ ├─ ProdutoService.java
-│ └─ UsuarioService.java
-│
-├─ controller
-│ ├─ ProdutoController.java
-│ └─ UsuarioController.java
-│
-└─ security
-├─ JwtService.java
-├─ JwtAuthFilter.java
-├─ UserDetailsImpl.java
-├─ UserDetailsServiceImpl.java
-└─ SecurityConfig.java
+![Fluxograma do Projeto](https://ik.imagekit.io/Thalima23/ChatGPT%20Image%2027%20de%20out.%20de%202025,%2015_25_58.png?updatedAt=1761589697718)
 
 ---
 
@@ -117,17 +100,32 @@ src/main/java/com/generation/farmacia
 
 ---
 ```
-## 🔹 Segurança
+---
+##  Segurança
 
 JWT Authentication: Rotas privadas exigem token JWT no header Authorization: Bearer <token>.
 Spring Security protege endpoints sensíveis.
 Senhas são criptografadas com BCrypt antes de persistir no banco.
 
-## 🔹 Banco de Dados
+---
 
-MySQL
-Tabelas principais:
-tb_produtos
-tb_categorias
-tb_usuarios
+## 💾 Banco de Dados
+
+**Banco utilizado:** MySQL  
+
+| Tabela         | Descrição                                   |
+|----------------|---------------------------------------------|
+| `tb_produtos`  | Armazena as informações dos produtos da farmácia (nome, preço, quantidade, categoria, etc.) |
+| `tb_categorias`| Classifica os produtos por tipo (medicamentos, cosméticos, suplementos, etc.) |
+| `tb_usuarios`  | Contém dados dos usuários, incluindo login, senha e permissões de acesso |
+
+
+---
+
+## 👩‍💻 7. Desenvolvido por
+
+Desenvolvido por [**Thalita**](https://github.com/rafaelq80) 💜
+Como parte do Bootcamp Generation Brasil – Full Stack Java 83.
+
+📫 Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue! 🚀
 
