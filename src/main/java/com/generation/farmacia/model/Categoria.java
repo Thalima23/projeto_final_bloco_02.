@@ -14,7 +14,7 @@ public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	
 	@NotBlank(message = "O nome da categoria é obrigatório!")
 	 @Size(min = 2, max = 100, message= "O atributo nome deve conter no mínimo 2 e no máximo 100 caracteres")

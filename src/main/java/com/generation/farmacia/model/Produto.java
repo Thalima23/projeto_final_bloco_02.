@@ -23,7 +23,7 @@ public class Produto {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 	
 	@NotBlank(message = "O nome do produto é obrigatório!")
     @Size(min = 2, max = 100, message = "O nome deve ter entre 2 e 100 caracteres.")
@@ -38,13 +38,13 @@ public class Produto {
 	@NotNull(message = "O preço é obrigatório!")
     @DecimalMin(value = "0.01", message = "O preço deve ser maior que zero!")
     @Digits(integer = 10, fraction = 2, message = "O preço deve ter no máximo 10 dígitos inteiros e 2 decimais")
-    @Column(nullable = false, precision = 12, scale = 2)
+    @Column(nullable = false)
     private BigDecimal preco;
 	
 	@NotBlank(message = "A Marca do produto é obrigatório!")
     @Size(min = 2, max = 100, message = "O nome do laboratório deve ter entre 2 e 100 caracteres.")
 	@Column(nullable = false, precision = 12, scale = 2)
-    private String Marca;
+    private String marca;
 	
 	@Size(max = 5000, message = "A URL da capa do produto deve ter no máximo 5000 caracteres")
     @Column(length = 5000)
@@ -53,10 +53,11 @@ public class Produto {
 	@ManyToOne
     @JsonIgnoreProperties("produtos")
     private Categoria categoria;
+
 	
 	 // Getters e Setters//
-
-	public long getId() {
+	
+	public Long getId() {
 		return id;
 	}
 
@@ -89,11 +90,11 @@ public class Produto {
 	}
 
 	public String getMarca() {
-		return Marca;
+		return marca;
 	}
 
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.marca = marca;
 	}
 
 	public String getFoto() {
@@ -112,5 +113,6 @@ public class Produto {
 		this.categoria = categoria;
 	}
 	
+
 
 }
