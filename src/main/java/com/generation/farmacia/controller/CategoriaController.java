@@ -43,7 +43,6 @@ public class CategoriaController {
     // 4 - Criar nova categoria//
     @PostMapping
     public ResponseEntity<Categoria> postCategoria(@Valid @RequestBody Categoria categoria) {
-    	
         return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
     }
 
