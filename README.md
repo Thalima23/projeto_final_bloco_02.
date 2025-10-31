@@ -122,9 +122,9 @@ Senhas são criptografadas com BCrypt antes de persistir no banco.
 
 ---
 
-## 👩‍💻 7. Desenvolvido por
+## 👩🏽‍💻 7. Desenvolvido por
 
-Desenvolvido por [**Thalita**](https://github.com/rafaelq80) 💜
+Desenvolvido por [**Thalita**](https://github.com/Thalima23/) 💜
 Como parte do Bootcamp Generation Brasil – Full Stack Java 83.
 
 📫 Para dúvidas, sugestões ou colaborações, entre em contato via GitHub ou abra uma issue! 🚀
